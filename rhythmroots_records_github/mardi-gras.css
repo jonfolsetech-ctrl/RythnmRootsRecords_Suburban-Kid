@@ -1,0 +1,189 @@
+html:root {
+  --bg: #100c17;
+  --gold: #f0c04e;
+  --ivory: #fff1c7;
+  --muted: #c8bdca;
+  --line: #675435;
+  --parade-purple: #633486;
+  --parade-green: #197350;
+  --deep-plum: #1a1222;
+}
+
+html body {
+  background: var(--bg);
+  color: #f7f0e3;
+}
+
+html body header {
+  position: sticky;
+  background: rgb(20 13 28 / 94%);
+  border-bottom: 0;
+}
+
+html body header::after {
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+  left: 6%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--parade-purple) 0 33.33%, var(--gold) 33.33% 66.66%, var(--parade-green) 66.66%);
+  content: '';
+}
+
+html body .brand img {
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 0 3px rgb(99 52 134 / 40%);
+}
+
+html body nav a {
+  transition: color 160ms ease;
+}
+
+html body nav a:hover,
+html body footer a:hover {
+  color: var(--gold);
+}
+
+html body .menu {
+  border-color: var(--gold);
+  border-radius: 2px;
+}
+
+html body .skip:focus {
+  background: var(--gold);
+  outline: 2px solid var(--parade-purple);
+  outline-offset: 3px;
+}
+
+html body .hero {
+  background-color: var(--deep-plum);
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 63px, rgb(240 192 78 / 5%) 64px),
+    repeating-linear-gradient(0deg, transparent 0 63px, rgb(240 192 78 / 4%) 64px),
+    linear-gradient(112deg, rgb(99 52 134 / 32%), transparent 48%, rgb(25 115 80 / 25%)),
+    linear-gradient(135deg, #17101f, #0d1613 72%, #17101f);
+}
+
+html body .eyebrow,
+html body .hero h1 em,
+html body h2 em,
+html body blockquote em {
+  color: var(--gold);
+}
+
+html body .button {
+  border: 1px solid #ffe4a0;
+  border-radius: 2px;
+  background: linear-gradient(110deg, #e4b33f, #ffe5a0 52%, #e4b33f);
+  box-shadow: inset 0 -3px 0 rgb(99 52 134 / 22%);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+html body .button:hover {
+  box-shadow: inset 0 -3px 0 rgb(99 52 134 / 22%), 0 5px 18px rgb(240 192 78 / 20%);
+  transform: translateY(-2px);
+}
+
+html body a:focus-visible,
+html body button:focus-visible,
+html body input:focus-visible,
+html body select:focus-visible,
+html body textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+html body .hero-foot {
+  border-color: var(--line);
+  background: linear-gradient(90deg, rgb(99 52 134 / 12%), transparent 45%, rgb(25 115 80 / 12%));
+}
+
+html body .dark {
+  border-block: 1px solid var(--line);
+  background: linear-gradient(115deg, #1a1222, #10231b 72%, #1a1222);
+}
+
+html body .artist {
+  border-color: var(--gold);
+  background: #17101f;
+  box-shadow: 8px 8px 0 rgb(25 115 80 / 22%);
+}
+
+html body .art {
+  overflow: hidden;
+  background: linear-gradient(135deg, #176247, #21152b 52%, #513719);
+}
+
+html body .art::before {
+  width: 52%;
+  border-color: rgb(240 192 78 / 60%);
+  border-radius: 2px;
+  box-shadow: 0 0 0 12px rgb(240 192 78 / 7%), 0 0 0 25px rgb(99 52 134 / 20%);
+  transform: rotate(45deg);
+}
+
+html body .art span,
+html body .tags {
+  color: var(--gold);
+}
+
+html body .releases article {
+  border-color: var(--line);
+  background: #17101f;
+}
+
+html body .cover::before {
+  border-color: rgb(255 241 199 / 66%);
+}
+
+html body .cover.one {
+  background: linear-gradient(145deg, #6b398e, #25172f 70%, #14261e);
+}
+
+html body .cover.two {
+  background: linear-gradient(145deg, #247e58, #173b2d 55%, #25172f);
+}
+
+html body .cover.three {
+  background: linear-gradient(145deg, #b4862d, #342518 42%, #1b1324 78%, #1b4f3b);
+}
+
+html body .manifesto {
+  border-color: var(--gold);
+  background:
+    repeating-linear-gradient(135deg, transparent 0 34px, rgb(240 192 78 / 3%) 35px 36px),
+    linear-gradient(110deg, #21152b, #123322 58%, #21152b);
+}
+
+html body input,
+html body select,
+html body textarea {
+  border-color: #66533f;
+  border-radius: 2px;
+  background: #15101b;
+}
+
+html body input:focus,
+html body select:focus,
+html body textarea:focus {
+  border-color: var(--gold);
+}
+
+html body footer {
+  border-top: 3px solid var(--gold);
+  background: linear-gradient(110deg, #17101f, #102119 55%, #17101f);
+}
+
+@media (max-width: 780px) {
+  html body nav {
+    border-bottom-color: var(--gold);
+    background: #17101f;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body nav a,
+  html body .button {
+    transition: none;
+  }
+}
