@@ -6,9 +6,9 @@ const Eyebrow = ({children}) => <p className="eyebrow text-rhythm-gold font-bold
 export default function App() {
  const [open,setOpen] = useState(false);
  const [form,setForm] = useState({name:'',email:'',topic:'Artist inquiry',message:''});
- const [note,setNote] = useState('This starter form opens an email draft after a real label inbox is configured.');
+ const [note,setNote] = useState('Submitting opens an email draft addressed to RhythmRoots Records.');
  const change = e => setForm(v=>({...v,[e.target.name]:e.target.value}));
- const submit = e => { e.preventDefault(); const recipient='YOUR-LABEL-EMAIL@example.com'; if(recipient==='YOUR-LABEL-EMAIL@example.com'){setNote('Setup required: replace YOUR-LABEL-EMAIL@example.com in src/App.jsx with the label inbox before launch. No message has been sent.');return;} const subject=encodeURIComponent('RhythmRoots Records: '+form.topic); const body=encodeURIComponent('Name: '+form.name+'\nEmail: '+form.email+'\nTopic: '+form.topic+'\n\n'+form.message); window.location.href='mailto:'+recipient+'?subject='+subject+'&body='+body; };
+ const submit = e => { e.preventDefault(); const recipient='jon.folse.tech@gmail.com'; const subject=encodeURIComponent('RhythmRoots Records: '+form.topic); const body=encodeURIComponent('Name: '+form.name+'\nEmail: '+form.email+'\nTopic: '+form.topic+'\n\n'+form.message); window.location.href='mailto:'+recipient+'?subject='+subject+'&body='+body; };
  return <>
  <a className="skip-link" href="#main">Skip to content</a>
  <header className="site-header"><a className="brand" href="#home" aria-label="RhythmRoots Records home"><img src={logo} alt="RhythmRoots Records emblem"/><span>RHYTHMROOTS<small>RECORDS</small></span></a>
