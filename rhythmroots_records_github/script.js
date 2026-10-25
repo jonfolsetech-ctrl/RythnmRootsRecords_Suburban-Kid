@@ -25,7 +25,7 @@ document.querySelector('#contact-form')?.addEventListener('submit', (event) => {
     if (recipient === 'YOUR-LABEL-EMAIL@example.com') {
         const formNote = document.querySelector('#form-note');
         if (formNote) {
-            formNote.textContent = 'Setup required: replace YOUR-LABEL-EMAIL@example.com in script.ts with your real label email. This starter form is not connected to a server.';
+            formNote.textContent = 'Setup required: replace YOUR-LABEL-EMAIL@example.com in script.js with your real label email. This starter form is not connected to a server.';
         }
         return;
     }
