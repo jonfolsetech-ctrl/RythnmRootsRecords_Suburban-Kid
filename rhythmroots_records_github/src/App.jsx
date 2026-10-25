@@ -2,7 +2,7 @@ import { useState } from 'react';
 const logo = import.meta.env.BASE_URL + 'rhythmroots-records-logo.png';
 const nav = [['Our Roots','#story'],['Artists','#artists'],['Music','#music'],['Contact','#contact']];
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const Eyebrow = ({children}) => <p className="eyebrow">{children}</p>;
+const Eyebrow = ({children}) => <p className="eyebrow text-rhythm-gold font-bold uppercase">{children}</p>;
 export default function App() {
  const [open,setOpen] = useState(false);
  const [form,setForm] = useState({name:'',email:'',topic:'Artist inquiry',message:''});
