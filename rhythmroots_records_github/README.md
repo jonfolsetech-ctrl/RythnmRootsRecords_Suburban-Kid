@@ -1,35 +1,25 @@
-# RhythmRoots Records — GitHub-ready website
+# RhythmRoots Records — React + Tailwind
 
-Responsive static HTML/CSS site with TypeScript behavior, using the supplied RhythmRoots Records logo and the tagline **From Footsteps to Frequencies**.
+Responsive React website for RhythmRoots Records using Vite, Tailwind CSS, and a custom responsive stylesheet. Brand direction: dark premium tones, antique gold and ivory, Louisiana/New Orleans roots, and the tagline “From Footsteps to Frequencies.”
 
-## Included
-- `index.html` — website sections and SEO metadata
-- `styles.css` — responsive black, antique-gold, and ivory brand styling
-- `script.ts` — typed mobile navigation, year, and contact-form behavior
-- `script.js` — compiled browser script loaded by the page
-- `tsconfig.json` — TypeScript compiler configuration
-- `assets/rhythmroots-records-logo.png` — provided logo
+## Stack
+- React 18
+- Vite 5
+- Tailwind CSS 3
+- GitHub Pages deployment through GitHub Actions
 
-## Before launch
-1. In `script.ts`, replace `YOUR-LABEL-EMAIL@example.com` with the real label inbox, then rebuild.
-2. Replace concept release artwork/text with confirmed releases and official links.
-3. Add approved artist biographies, photos, social links, and streaming profiles.
-4. The contact form is a starter only; it opens an email draft after setup and is not connected to a server.
-5. Google Fonts are loaded remotely; system fallback fonts are provided.
+## Local development
+From this directory run: npm install, then npm run dev.
 
-## Publish with GitHub Pages
-1. Create a repository such as `rhythmroots-records`.
-2. Extract this ZIP and upload the **contents** of `rhythmroots_records_github` to the repository root. Ensure `index.html` is at the root.
-3. Open repository **Settings → Pages**.
-4. Select **Deploy from a branch**, choose branch `main` and folder `/ (root)`, then save.
-5. Wait for deployment. GitHub Pages will show the published URL in Settings → Pages.
+Production build: npm run build. Preview it with npm run preview.
 
-## Build
-Install dependencies and compile the TypeScript source:
+The logo in the assets directory is copied into the build output root by Vite's publicDir setting.
 
-```sh
-npm install
-npm run build
-```
+## Deployment
+Push to main. GitHub Actions installs dependencies, builds the app, and deploys dist/ to GitHub Pages. The repository base path is configured in vite.config.js. The workflow also keeps the previous nested URL working.
 
-The build writes `script.js`, which the static page loads directly. Publish the compiled file with the rest of the site.
+## Before public launch
+- Replace YOUR-LABEL-EMAIL@example.com in src/App.jsx with the real label inbox. The form opens a prepared email draft; it is not a server-backed form.
+- Replace concept artwork/text with confirmed releases and official links.
+- Add approved artist biography, photos, social links, and streaming profiles.
+- Google Fonts are loaded remotely; system fallbacks are provided.
