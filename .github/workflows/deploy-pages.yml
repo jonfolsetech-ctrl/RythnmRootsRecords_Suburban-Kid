@@ -34,10 +34,11 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build React and Tailwind site
-        run: npm run build
-      - name: Add premium static launch site
+        run: npm run build -- --outDir build-output
+      - name: Publish React and Tailwind site at premium URL
         run: |
-          cp -R ../premium dist/premium
+          mkdir -p dist/premium
+          cp -R build-output/. dist/premium/
           mkdir -p dist/rhythmroots_records_github
           cat > dist/rhythmroots_records_github/index.html <<'EOF'
           <!doctype html>
