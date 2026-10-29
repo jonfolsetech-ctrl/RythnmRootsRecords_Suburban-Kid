@@ -5,6 +5,7 @@ on:
     paths:
       - "index.html"
       - "rhythmroots_records_github/**"
+      - "premium/**"
       - ".github/workflows/deploy-pages.yml"
       - ".github/workflows/jekyll-gh-pages.yml"
   workflow_dispatch:
@@ -34,10 +35,14 @@ jobs:
         run: npm install
       - name: Build React and Tailwind site
         run: npm run build
-      - name: Keep legacy nested URL working
+      - name: Add premium static launch site
         run: |
+          cp -R ../premium dist/premium
           mkdir -p dist/rhythmroots_records_github
-          cp dist/index.html dist/rhythmroots_records_github/index.html
+          cat > dist/rhythmroots_records_github/index.html <<'EOF'
+          <!doctype html>
+          <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=../premium/"><title>RhythmRootsRecords</title><script>window.location.replace(new URL("../premium/",window.location.href).href)</script></head><body><p>Opening <a href="../premium/">RhythmRootsRecords</a>…</p></body></html>
+          EOF
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload built site
