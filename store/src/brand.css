@@ -1,0 +1,35 @@
+/* Shared RhythmRoots Records brand. Keep identical in both repositories. */
+:root{--rr-bg:#0a0908;--rr-panel:#14120f;--rr-gold:#d5ad58;--rr-cream:#f4eddf;--rr-muted:#b1a697;--rr-line:#3b3020;--rr-purple:#633486;--rr-green:#197350;--rr-font-body:'DM Sans',Arial,sans-serif;--rr-font-display:'Playfair Display',Georgia,serif;--carnival-purple:var(--rr-purple);--carnival-green:var(--rr-green);--carnival-gold:var(--rr-gold)}
+::selection{background:var(--rr-gold);color:var(--rr-bg)}
+.rr-logo{width:44px;height:44px;flex-shrink:0;object-fit:contain;border:1px solid var(--rr-gold);border-radius:50%;padding:2px}
+
+:root{color:var(--rr-cream);background:var(--rr-bg);font-family:var(--rr-font-body);--bayou:var(--rr-green)}
+h1,h2,h3{font-family:var(--rr-font-display)}
+p,.muted{color:var(--rr-muted)}
+.header,.mobile-nav{background:var(--rr-bg);border-color:var(--rr-line)}
+.brand{font-family:var(--rr-font-body);font-size:15px;letter-spacing:.08em;font-weight:800;color:var(--rr-cream)}
+.brand>span>span{color:var(--rr-gold);letter-spacing:.28em;font-size:9px}
+.header{border-bottom:2px solid transparent;border-image:linear-gradient(90deg,var(--rr-purple),var(--rr-gold),var(--rr-green)) 1}
+.announcement{background:linear-gradient(90deg,#21152a,#100d09,#141c14);color:var(--rr-gold);border:0}
+.desktop-nav a.active,.eyebrow,.hero h1 em,.tiny-star{color:var(--rr-gold)}
+.hero{background:radial-gradient(ellipse at 15% 20%,#63348622,transparent 45%),radial-gradient(ellipse at 85% 35%,#19735022,transparent 48%)}
+.button,.button.cream{background:var(--rr-gold);color:var(--rr-bg);border:1px solid var(--rr-gold)}
+.button.secondary,.button.ghost{background:transparent;color:var(--rr-cream);border-color:var(--rr-gold)}
+.button:hover,.button.secondary:hover,.button.ghost:hover{background:#e4c180;color:var(--rr-bg);border-color:#e4c180}
+input,select,textarea{background:var(--rr-panel);color:var(--rr-cream);border-color:#766348}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline-color:var(--rr-gold)}
+.genre-strip,.genre-grid>a,.newsletter,footer{background:var(--rr-panel);color:var(--rr-cream);border-color:var(--rr-line)}
+footer .brand{color:var(--rr-cream)}
+.license-banner{background:linear-gradient(110deg,#21152b,#123322,#21152b)}
+.player{background:var(--rr-bg);color:var(--rr-cream)}
+.product-card h3{color:var(--rr-cream)}
+.cover-label,.demo-note{background:var(--rr-panel);color:var(--rr-cream)}
+.culture-poster{color:#171512}
+.culture-poster>strong em{color:var(--rr-purple)}
+.section-heading h2,.newsletter h2,.genre-grid h3{color:var(--rr-cream)}
+.section-heading .eyebrow,.genre-grid span,.genre-grid svg{color:var(--rr-gold)}
+.card-meta{color:var(--rr-muted)}
+.hero h1{color:var(--rr-cream)}
+.hero .eyebrow{color:var(--rr-gold)}
+.hero p{color:var(--rr-muted)}
+.field-error{color:#f1a6a6}

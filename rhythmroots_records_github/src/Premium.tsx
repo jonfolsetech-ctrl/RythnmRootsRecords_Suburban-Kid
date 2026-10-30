@@ -6,7 +6,7 @@ const SUNO_PROFILE_URL = 'https://suno.com/@rythmnrootsrecords';
 type SunoTrack = { title: string; url: string; id?: string };
 const SUNO_TRACKS: readonly SunoTrack[] = [{ title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' }];
 
-const STORE_URL = 'https://jonfolsetech-ctrl.github.io/RhythmRootRecords_Store/';
+const STORE_URL = `${import.meta.env.BASE_URL}store/`;
 const nav: readonly (readonly [label: string, href: string])[] = [['Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
 const goldButton = 'inline-flex min-h-11 items-center justify-center border border-rhythm-gold px-4 sm:px-5 py-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[.08em] sm:tracking-[.12em] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-rhythm-gold';
 const eyebrow = 'text-[10px] font-bold uppercase tracking-[.28em] text-rhythm-gold';

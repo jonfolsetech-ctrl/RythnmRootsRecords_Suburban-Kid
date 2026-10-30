@@ -1,0 +1,10 @@
+import {catalogSchema} from './productSchema';
+import {beats} from '../data/beats'; import {samples} from '../data/samples'; import {releases} from '../data/releases'; import type {Product,Selection} from '../types';
+export const catalog:Product[]=catalogSchema.parse([...beats,...samples,...releases]);
+export const money=(n:number)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+export const time=(n:number)=>`${Math.floor((n||0)/60)}:${String(Math.floor((n||0)%60)).padStart(2,'0')}`;
+export function selectionPrice(s:Selection){const p=catalog.find(p=>p.id===s.productId);return p?.productType==='beat'?(p.licenseOptions.find(l=>l.id===s.licenseId)?.price??0):(p?.price??0)}
+export function readSelections(raw:string|null):Selection[]{try{const v:unknown=JSON.parse(raw??'[]');if(!Array.isArray(v))return [];return v.filter((s):s is Selection=>{if(!s||typeof s!=='object')return false;const p=catalog.find(p=>p.id===s.productId);return !!p&&p.productType!=='release'&&(p.productType!=='beat'||p.licenseOptions.some(l=>l.id===s.licenseId&&l.price!==null));}).filter((s,i,a)=>a.findIndex(t=>t.productId===s.productId&&t.licenseId===s.licenseId)===i);}catch{return []}}
+export interface Filters {query:string;genre:string;mood:string;key:string;minBpm:number;maxBpm:number;maxPrice:number;category:string;sort:string}
+export const initialFilters:Filters={query:'',genre:'',mood:'',key:'',minBpm:0,maxBpm:200,maxPrice:200,category:'',sort:'newest'};
+export function filterProducts(items:Product[],f:Filters){return items.filter(p=>`${p.title} ${p.genre} ${p.tags.join(' ')}`.toLowerCase().includes(f.query.toLowerCase())&&(!f.genre||p.genre===f.genre)&&(!f.mood||p.mood===f.mood)&&p.price<=f.maxPrice&&(!f.category||p.productType==='sample'&&p.category===f.category)&&(p.productType!=='beat'||(!f.key||p.musicalKey===f.key)&&p.bpm>=f.minBpm&&p.bpm<=f.maxBpm)).sort((a,b)=>f.sort==='price-low'?a.price-b.price:f.sort==='price-high'?b.price-a.price:f.sort==='title'?a.title.localeCompare(b.title):(b.releaseDate??'').localeCompare(a.releaseDate??''));}
