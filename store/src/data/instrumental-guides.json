@@ -1,0 +1,59 @@
+{
+  "jazz": {
+    "name": "Jazz",
+    "title": "Jazz Instrumentals & Beats",
+    "intro": "Jazz instrumentals leave room for personality: a chord that takes an unexpected turn, a melody that answers the vocal, a groove that breathes. RhythmRoots Records brings that exploratory spirit into its New Orleans-inspired creative direction.",
+    "sections": [
+      [
+        "Find space for your voice",
+        "For a vocal project, start with a groove that supports your phrasing. A busy piano or brass melody can be exciting on its own but may compete with a lead vocal. Listen for pockets between phrases and imagine where your hook will land."
+      ],
+      [
+        "Listen beyond the tempo",
+        "Swing, syncopation and chord movement shape the feel as much as BPM. Try a relaxed delivery against a lively rhythm or a conversational flow over spacious harmony. Use the preview to explore the mood before planning a full arrangement."
+      ],
+      [
+        "Build a jazz-inspired session",
+        "Start with a rhythmic idea, then add contrast: a sparse verse, a fuller chorus, or a breakdown that lets a melodic detail come forward. Our jazz demo catalog and sample-pack concepts offer a starting point for exploring those choices."
+      ]
+    ]
+  },
+  "blues": {
+    "name": "Blues",
+    "title": "Blues Instrumentals & Beats",
+    "intro": "Blues instrumentals make emotion the center of the arrangement. A simple melodic phrase, a patient groove and a little tension can carry a story further than a crowded production. Explore the blues feeling at the heart of RhythmRoots Records.",
+    "sections": [
+      [
+        "Let the melody answer",
+        "Think of a blues instrumental as a conversation. Leave a gap after a lyric and hear how the instrumental responds. That call-and-response space can give a verse its character and help a chorus feel earned."
+      ],
+      [
+        "Choose the right emotional weight",
+        "A slower groove can feel reflective, while a driving rhythm can bring confidence and momentum. Listen to the bass and drums together rather than choosing by tempo alone. Match the feel to the story you want to tell."
+      ],
+      [
+        "Keep the performance human",
+        "Dynamics, rests and small changes in phrasing make a performance expressive. Build your recording around those details. The blues demo previews in our catalog let you explore the listening experience before discussing a project."
+      ]
+    ]
+  },
+  "soul": {
+    "name": "Soul",
+    "title": "Soul Instrumentals & Soulful Beats",
+    "intro": "Soul instrumentals bring warmth, melody and movement together. From an intimate vocal idea to a layered chorus, a soulful foundation gives an artist room to connect. Discover how soul informs the RhythmRoots Records sound.",
+    "sections": [
+      [
+        "Make room for the lead",
+        "Choose an instrumental whose main melody complements your voice. If your hook is detailed, a simpler accompaniment may give it more impact. If your vocal is restrained, a richer harmonic texture can help carry the emotion."
+      ],
+      [
+        "Follow the groove",
+        "A soulful feel comes from the relationship between drums, bass and phrasing. Listen for how the rhythm settles and where you naturally want to enter. A strong pocket can make a quiet performance feel compelling."
+      ],
+      [
+        "Turn an idea into a direction",
+        "Bring a mood, a reference or a rough vocal idea to the conversation. Tell us whether you are exploring a warm ballad, a jazz-influenced groove or a hip-hop crossover. Soul is a creative direction here; a dedicated purchasable soul collection is not currently listed."
+      ]
+    ]
+  }
+}

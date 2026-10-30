@@ -34,5 +34,17 @@
   "/legal": [
     "Privacy & demo terms",
     "Read the RhythmRoots Records demonstration privacy and terms placeholders, browser storage information and licensing limitations."
+  ],
+  "/instrumentals/jazz": [
+    "Jazz Instrumentals & Beats",
+    "Jazz instrumentals leave room for personality: a chord that takes an unexpected turn, a melody that answers the vocal, a groove that breathes. RhythmRoots "
+  ],
+  "/instrumentals/blues": [
+    "Blues Instrumentals & Beats",
+    "Blues instrumentals make emotion the center of the arrangement. A simple melodic phrase, a patient groove and a little tension can carry a story further th"
+  ],
+  "/instrumentals/soul": [
+    "Soul Instrumentals & Soulful Beats",
+    "Soul instrumentals bring warmth, melody and movement together. From an intimate vocal idea to a layered chorus, a soulful foundation gives an artist room t"
   ]
 }

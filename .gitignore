@@ -2,3 +2,5 @@
 _site/
 store/node_modules
 store/dist/
+
+**/.prerender/

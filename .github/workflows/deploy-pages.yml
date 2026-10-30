@@ -33,6 +33,8 @@ jobs:
           VITE_ENABLE_INDEXING: 'true'
       - name: Assemble one website
         run: node scripts/assemble.mjs
+      - name: Verify rendered SEO pages
+        run: node scripts/check-seo.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
