@@ -3,14 +3,15 @@ import React from 'react';
 // Add approved public Suno songs here when their individual IDs are available.
 // Example: { id: 'actual-suno-song-uuid', title: 'Verified song title' }
 const SUNO_PROFILE_URL = 'https://suno.com/@rythmnrootsrecords';
-const SUNO_TRACKS = [{ title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' }];
+type SunoTrack = { title: string; url: string; id?: string };
+const SUNO_TRACKS: readonly SunoTrack[] = [{ title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' }];
 
 const STORE_URL = 'https://jonfolsetech-ctrl.github.io/RhythmRootRecords_Store/';
-const nav = [['Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
+const nav: readonly (readonly [label: string, href: string])[] = [['Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
 const goldButton = 'inline-flex min-h-11 items-center justify-center border border-rhythm-gold px-4 sm:px-5 py-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[.08em] sm:tracking-[.12em] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-rhythm-gold';
 const eyebrow = 'text-[10px] font-bold uppercase tracking-[.28em] text-rhythm-gold';
 const heading = 'font-display font-medium leading-[1.04] tracking-[-.04em]';
-function Fleur({className = ''}) { return <span aria-hidden="true" className={className}>⚜</span>; }
+function Fleur({className = ''}: { className?: string }) { return <span aria-hidden="true" className={className}>⚜</span>; }
 
 export default function Premium() {
  return <div className="min-h-screen overflow-hidden bg-[#0a0908] text-[#f4eddf]">
@@ -37,7 +38,7 @@ export default function Premium() {
         <div><p className={eyebrow}>Official Suno profile</p><h3 className="mt-2 font-display text-2xl sm:text-3xl">Listen to RhythmRoots Records</h3><p className="mt-2 text-sm leading-6 text-[#b1a697]">Hear the latest public music directly on Suno. Individual tracks will appear below as they are approved for the website.</p></div>
         <a href={SUNO_PROFILE_URL} target="_blank" rel="noopener noreferrer" className={goldButton+' shrink-0 bg-rhythm-gold text-[#171108]'} aria-label="Listen to RhythmRoots Records on Suno (opens in new tab)">Listen on Suno ↗</a>
       </div>
-      {SUNO_TRACKS.length > 0 && <div className="mt-7 grid gap-5 md:grid-cols-2">{SUNO_TRACKS.map(track => <article key={track.url || track.id} className="min-w-0 rounded-lg border border-[#514026] bg-[#0d0b0a] p-3 sm:p-4"><h4 className="mb-3 font-display text-lg text-[#f4eddf]">{track.title}</h4>{track.id && <iframe title={`Play ${track.title} on Suno`} src={`https://suno.com/embed/${encodeURIComponent(track.id)}`} loading="lazy" allow="autoplay; encrypted-media" className="h-40 w-full rounded-lg border-0" />}<a href={track.url || `https://suno.com/song/${encodeURIComponent(track.id)}`} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-xs font-bold text-rhythm-gold underline underline-offset-4">Listen to track on Suno ↗</a></article>)}</div>}
+      {SUNO_TRACKS.length > 0 && <div className="mt-7 grid gap-5 md:grid-cols-2">{SUNO_TRACKS.map(track => <article key={track.url} className="min-w-0 rounded-lg border border-[#514026] bg-[#0d0b0a] p-3 sm:p-4"><h4 className="mb-3 font-display text-lg text-[#f4eddf]">{track.title}</h4>{track.id && <iframe title={`Play ${track.title} on Suno`} src={`https://suno.com/embed/${encodeURIComponent(track.id)}`} loading="lazy" allow="autoplay; encrypted-media" className="h-40 w-full rounded-lg border-0" />}<a href={track.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-xs font-bold text-rhythm-gold underline underline-offset-4">Listen to track on Suno ↗</a></article>)}</div>}
     </div>
     <div className="grid gap-8 md:grid-cols-[.9fr_1.1fr]"><div className="grid min-h-[280px] place-items-center border border-[#5c3929] bg-[radial-gradient(ellipse_at_50%_40%,#49291f,#0b0a09_65%)] text-center outline outline-1 outline-offset-[-18px] outline-[#d5ad5855]"><div><div className="font-display text-8xl tracking-[-.1em] text-rhythm-gold">RR</div><p className="mt-5 text-[9px] uppercase leading-5 tracking-[.3em]">RhythmRoots Records<br/>Independent Sound System</p></div></div><div className="self-center py-3"><p className={eyebrow}>Featured release · Coming soon</p><h3 className="mt-3 font-display text-3xl md:text-4xl">The next chapter starts here.</h3><p className="mt-4 text-sm leading-7 text-[#b1a697]">Original productions shaped by Southern rhythm, New Orleans character, and a willingness to cross genres. Official release artwork and listening links will be added when confirmed.</p><div className="my-5 flex flex-wrap gap-2">{['Southern Trap','Blues','Jazz','Bounce'].map(x=><span key={x} className="border border-[#3b3020] px-3 py-1 text-[10px] uppercase tracking-widest text-[#c9bba7]">{x}</span>)}</div><a className={goldButton+' bg-rhythm-gold text-[#171108]'} href="#contact">Release &amp; media inquiries</a></div></div>
    </section>

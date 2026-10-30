@@ -1,11 +1,24 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["DOM", "ES2020"],
-    "module": "None",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
     "strict": true,
+    "noEmit": true,
     "skipLibCheck": true,
-    "outFile": "script.js"
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["script.ts"]
+  "include": [
+    "src",
+    "vite.config.ts"
+  ]
 }
