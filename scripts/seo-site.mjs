@@ -1,6 +1,6 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 const base='https://jonfolsetech-ctrl.github.io/RythnmRootsRecords_Suburban-Kid/';
-const image=base+'rhythmroots-records-logo.png';
+const image=base+'rhythmroots-brand-logo.png';
 const pages=JSON.parse(await readFile('store/src/config/page-metadata.json','utf8'));
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 const graph={'@context':'https://schema.org','@graph':[{'@type':'Organization','@id':base+'#organization',name:'RhythmRoots Records',url:base,logo:image,description:'Independent music and instrumental inspiration rooted in New Orleans.',areaServed:{'@type':'Country',name:'United States'},sameAs:['https://suno.com/@rythmnrootsrecords']},{'@type':'WebSite','@id':base+'#website',url:base,name:'RhythmRoots Records',inLanguage:'en-US',publisher:{'@id':base+'#organization'}}]};

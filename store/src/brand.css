@@ -37,3 +37,9 @@ footer .brand{color:var(--rr-cream)}
 /* Keep both site links and menu controls usable on narrow phones. */
 .label-home{font-size:12px;white-space:nowrap;color:var(--rr-gold)}
 @media(max-width:420px){.header{gap:12px}.header-actions{gap:10px}.brand{font-size:13px;gap:7px}.brand .rr-logo{width:36px;height:36px}.brand>span>span{letter-spacing:.2em}}
+
+/* Display the complete supplied logo without a circular crop. */
+.rr-logo{border:0;border-radius:0;padding:0;object-fit:contain;width:56px;height:56px}
+.brand-art{aspect-ratio:1;background:#000;border:1px solid var(--rr-line);box-shadow:none}
+.brand-art img{width:100%;height:100%;object-fit:contain}
+@media(max-width:420px){.brand .rr-logo{width:42px;height:42px}}
