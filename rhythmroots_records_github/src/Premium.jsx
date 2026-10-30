@@ -5,7 +5,8 @@ import React from 'react';
 const SUNO_PROFILE_URL = 'https://suno.com/@rythmnrootsrecords';
 const SUNO_TRACKS = [{ title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' }];
 
-const nav = [['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
+const STORE_URL = 'https://jonfolsetech-ctrl.github.io/RhythmRootRecords_Store/';
+const nav = [['Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
 const goldButton = 'inline-flex min-h-11 items-center justify-center border border-rhythm-gold px-4 sm:px-5 py-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[.08em] sm:tracking-[.12em] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-rhythm-gold';
 const eyebrow = 'text-[10px] font-bold uppercase tracking-[.28em] text-rhythm-gold';
 const heading = 'font-display font-medium leading-[1.04] tracking-[-.04em]';
@@ -17,7 +18,7 @@ export default function Premium() {
   <header className="sticky top-0 z-40 border-b border-[#3b3020] bg-[#0a0908]/95 backdrop-blur-xl"><div className="mx-auto flex min-h-[68px] w-[min(1160px,calc(100%-24px))] items-center justify-between gap-2 sm:min-h-[74px] sm:gap-4">
    <a href="#home" className="flex items-center gap-3" aria-label="RhythmRoots Records home"><img src={`${import.meta.env.BASE_URL}rhythmroots-records-logo.png`} alt="RhythmRoots Records logo" className="h-10 w-10 shrink-0 rounded-full border border-rhythm-gold object-contain p-0.5 sm:h-11 sm:w-11" /><span className="text-[10px] font-extrabold tracking-[.08em] sm:text-[11px] sm:tracking-[.16em]">RHYTHMROOTS<small className="block text-[8px] tracking-[.14em] text-rhythm-gold sm:text-[9px] sm:tracking-[.28em]">RECORDS · INDEPENDENT SOUND</small></span></a>
    <nav className="hidden items-center gap-6 text-xs text-[#ddd0bb] md:flex" aria-label="Main navigation">{nav.map(([label,href])=><a key={href} className="transition hover:text-rhythm-gold" href={href}>{label}</a>)}</nav>
-   <a href="#contact" className={goldButton}>Connect</a></div><div className="h-[2px] bg-gradient-to-r from-[#633486] via-rhythm-gold to-[#197350]"/></header>
+   <a href={STORE_URL} className={goldButton+' shrink-0 bg-rhythm-gold text-[#171108]'}>Store ↗</a></div><div className="h-[2px] bg-gradient-to-r from-[#633486] via-rhythm-gold to-[#197350]"/></header>
   <main id="main">
    <section id="home" className="relative mx-auto grid min-h-[610px] w-[min(1160px,calc(100%-28px))] items-center gap-10 py-16 md:grid-cols-[1.15fr_.85fr] md:py-20">
     <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_12%_18%,#5b2b7a55_0,transparent_26%),radial-gradient(circle_at_86%_24%,#14744644_0,transparent_24%),radial-gradient(ellipse_at_80%_40%,#6f4d1d40_0,transparent_48%),linear-gradient(120deg,#17111b,#0a0908_72%)] opacity-95"/><div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-px bg-gradient-to-r from-[#6b2e8f] via-rhythm-gold to-[#1c7a4f]"/><div aria-hidden="true" className="pointer-events-none absolute right-[-40px] top-20 z-0 h-40 w-40 rotate-12 rounded-full border border-[#6b2e8f]/25 shadow-[0_0_70px_#6b2e8f22] md:h-56 md:w-56"/><div aria-hidden="true" className="pointer-events-none absolute bottom-14 left-[-60px] z-0 h-36 w-36 -rotate-12 rounded-full border border-[#1c7a4f]/20 shadow-[0_0_70px_#1c7a4f22] md:h-52 md:w-52"/>
