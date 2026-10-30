@@ -1,6 +1,11 @@
 # RhythmRoots Records — Suburban Kid
 
-**Live website:** https://jonfolsetech-ctrl.github.io/RythnmRootsRecords_Suburban-Kid/
+## Live view
+
+[**Open the Store ↗**](https://jonfolsetech-ctrl.github.io/RhythmRootRecords_Store/) · [**Open the Label ↗**](https://jonfolsetech-ctrl.github.io/RythnmRootsRecords_Suburban-Kid/)
+
+Both sites are hosted on GitHub Pages and can be viewed on mobile or desktop.
+
 
 A mobile-friendly static website concept for RhythmRoots Records, rooted in Louisiana culture and independent music, featuring the Suburban Kid artist spotlight.
 
