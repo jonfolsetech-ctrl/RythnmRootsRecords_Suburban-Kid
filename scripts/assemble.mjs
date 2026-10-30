@@ -14,3 +14,4 @@ for(const route of ['beats','samples','music','licensing','about','contact','car
 }
 // Product deep links and unknown store routes retain the application fallback.
 await cp('store/dist/index.html','_site/404.html');
+await import('./seo-site.mjs');
