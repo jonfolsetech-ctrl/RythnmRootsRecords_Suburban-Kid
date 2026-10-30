@@ -1,0 +1,6 @@
+/* Shared RhythmRoots Records brand. Keep identical in both repositories. */
+:root{--rr-bg:#0a0908;--rr-panel:#14120f;--rr-gold:#d5ad58;--rr-cream:#f4eddf;--rr-muted:#b1a697;--rr-line:#3b3020;--rr-purple:#633486;--rr-green:#197350;--rr-font-body:'DM Sans',Arial,sans-serif;--rr-font-display:'Playfair Display',Georgia,serif;--carnival-purple:var(--rr-purple);--carnival-green:var(--rr-green);--carnival-gold:var(--rr-gold)}
+::selection{background:var(--rr-gold);color:var(--rr-bg)}
+.rr-logo{width:44px;height:44px;flex-shrink:0;object-fit:contain;border:1px solid var(--rr-gold);border-radius:50%;padding:2px}
+
+:root{--gold:var(--rr-gold);--ivory:var(--rr-cream);--muted:var(--rr-muted);--line:var(--rr-line);font-family:var(--rr-font-body);background:var(--rr-bg);color:var(--rr-cream)}
