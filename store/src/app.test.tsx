@@ -9,3 +9,5 @@ describe('product configuration',()=>{it('validates demo products and rejects da
 
 import {RouteMetadata} from './components/RouteMetadata';
 describe('route metadata',()=>{it('uses product metadata and keeps unconfigured canonical URLs absent',()=>{render(<MemoryRouter initialEntries={['/beats/porchlight']}><RouteMetadata/></MemoryRouter>);expect(document.title).toContain('Porchlight');expect(document.querySelector('meta[name=description]')?.getAttribute('content')).toContain('Illustrative catalog');expect(document.querySelector('link[rel=canonical]')).toBeNull();expect(document.querySelector('meta[name=robots]')?.getAttribute('content')).toBe('noindex,follow')})});
+
+describe('GitHub Pages directory routes',()=>{it('keeps catalog metadata on a direct trailing-slash visit',()=>{render(<MemoryRouter initialEntries={['/beats/']}><RouteMetadata/></MemoryRouter>);expect(document.title).toBe('Beat store | RhythmRoots Records');expect(document.querySelector('meta[name=description]')?.getAttribute('content')).toContain('Search and filter');})});

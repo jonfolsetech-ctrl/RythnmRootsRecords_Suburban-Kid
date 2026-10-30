@@ -14,7 +14,7 @@ const pages:Record<string,[string,string]>={
  '/legal':['Privacy & demo terms','Read the RhythmRoots Records demonstration privacy and terms placeholders, browser storage information and licensing limitations.']
 };
 function meta(key:string,value:string,property=false){const attribute=property?'property':'name';let node=document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);if(!node){node=document.createElement('meta');node.setAttribute(attribute,key);document.head.append(node)}node.content=value;}
-export function RouteMetadata(){const {pathname}=useLocation();useEffect(()=>{
+export function RouteMetadata(){const {pathname:rawPathname}=useLocation();const pathname=rawPathname.replace(/\/+$/,'')||'/';useEffect(()=>{
  const product=catalog.find(p=>`/${p.productType==='beat'?'beats':'samples'}/${p.slug}`===pathname&&p.productType!=='release');
  const [title,description]=product?[`${product.title} · Demo ${product.productType}`,product.description]:pages[pathname]??['Page not found','This page is not in the RhythmRoots Records collection.'];
  const fullTitle=`${title} | RhythmRoots Records`;document.title=fullTitle;meta('description',description);meta('og:title',fullTitle,true);meta('og:description',description,true);meta('og:type','website',true);meta('og:site_name','RhythmRoots Records',true);meta('twitter:card','summary');
