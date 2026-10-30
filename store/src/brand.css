@@ -33,3 +33,7 @@ footer .brand{color:var(--rr-cream)}
 .hero .eyebrow{color:var(--rr-gold)}
 .hero p{color:var(--rr-muted)}
 .field-error{color:#f1a6a6}
+
+/* Keep both site links and menu controls usable on narrow phones. */
+.label-home{font-size:12px;white-space:nowrap;color:var(--rr-gold)}
+@media(max-width:420px){.header{gap:12px}.header-actions{gap:10px}.brand{font-size:13px;gap:7px}.brand .rr-logo{width:36px;height:36px}.brand>span>span{letter-spacing:.2em}}
