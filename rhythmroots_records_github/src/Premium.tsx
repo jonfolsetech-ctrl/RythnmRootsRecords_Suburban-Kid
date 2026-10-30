@@ -7,7 +7,7 @@ type SunoTrack = { title: string; url: string; id?: string };
 const SUNO_TRACKS: readonly SunoTrack[] = [{ title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' }];
 
 const STORE_URL = `${import.meta.env.BASE_URL}store/`;
-const nav: readonly (readonly [label: string, href: string])[] = [['Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
+const nav: readonly (readonly [label: string, href: string])[] = [['Beat Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
 const goldButton = 'inline-flex min-h-11 items-center justify-center border border-rhythm-gold px-4 sm:px-5 py-3 text-[10px] sm:text-[11px] font-bold uppercase tracking-[.08em] sm:tracking-[.12em] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-rhythm-gold';
 const eyebrow = 'text-[10px] font-bold uppercase tracking-[.28em] text-rhythm-gold';
 const heading = 'font-display font-medium leading-[1.04] tracking-[-.04em]';
@@ -19,7 +19,7 @@ export default function Premium() {
   <header className="sticky top-0 z-40 border-b border-[#3b3020] bg-[#0a0908]/95 backdrop-blur-xl"><div className="mx-auto flex min-h-[68px] w-[min(1160px,calc(100%-24px))] items-center justify-between gap-2 sm:min-h-[74px] sm:gap-4">
    <a href="#home" className="flex items-center gap-3" aria-label="RhythmRoots Records home"><img src={`${import.meta.env.BASE_URL}rhythmroots-brand-logo.png`} alt="RhythmRoots Records logo" className="h-14 w-14 shrink-0 rounded-full bg-black p-1 object-contain sm:h-16 sm:w-16" /><span className="text-[10px] font-extrabold tracking-[.08em] sm:text-[11px] sm:tracking-[.16em]">RHYTHMROOTS<small className="block text-[8px] tracking-[.14em] text-rhythm-gold sm:text-[9px] sm:tracking-[.28em]">RECORDS · INDEPENDENT SOUND</small></span></a>
    <nav className="hidden items-center gap-6 text-xs text-[#ddd0bb] md:flex" aria-label="Main navigation">{nav.map(([label,href])=><a key={href} className="transition hover:text-rhythm-gold" href={href}>{label}</a>)}</nav>
-   <a href={STORE_URL} className={goldButton+' shrink-0 bg-rhythm-gold text-[#171108]'}>Store ↗</a></div><div className="h-[2px] bg-gradient-to-r from-[#633486] via-rhythm-gold to-[#197350]"/></header>
+   <a href={STORE_URL} className={goldButton+' shrink-0 bg-rhythm-gold text-[#171108]'}>Beat Store ↗</a></div><div className="h-[2px] bg-gradient-to-r from-[#633486] via-rhythm-gold to-[#197350]"/></header>
   <details className="border-b border-[#3b3020] bg-[#0a0908] px-4 py-3 md:hidden"><summary className="cursor-pointer text-xs font-bold uppercase tracking-widest text-rhythm-gold">Explore the label</summary><nav className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Mobile label navigation">{nav.map(([label,href])=><a key={href} className="inline-flex min-h-11 items-center text-[#f4eddf] underline-offset-4 hover:underline" href={href}>{label}</a>)}</nav></details>
   <main id="main" tabIndex={-1}>
    <section id="home" className="relative mx-auto grid min-h-[610px] w-[min(1160px,calc(100%-28px))] items-center gap-10 py-16 md:grid-cols-[1.15fr_.85fr] md:py-20">
