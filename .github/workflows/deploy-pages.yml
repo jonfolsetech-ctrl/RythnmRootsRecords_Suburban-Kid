@@ -39,6 +39,7 @@ jobs:
         run: |
           mkdir -p dist/premium
           cp ../index.html dist/index.html
+          touch dist/.nojekyll
           cp -R build-output/. dist/premium/
           mkdir -p dist/rhythmroots_records_github
           cat > dist/rhythmroots_records_github/index.html <<'EOF'
