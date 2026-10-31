@@ -1,0 +1,35 @@
+/* The label uses the store's scale, spacing and navigation treatment. */
+:root{font-size:15px}
+body{line-height:1.6}
+body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.15;z-index:50;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.2' filter='url(%23n)'/%3E%3C/svg%3E")}
+.label-announcement{padding:9px 16px;text-align:center;background:linear-gradient(90deg,#21152a,#100d09,#141c14);color:var(--rr-gold);font-size:10px;letter-spacing:2.4px}
+.label-announcement a{margin-left:26px;letter-spacing:1px}
+.label-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 5.5%;background:var(--rr-bg);border-bottom:2px solid transparent;border-image:linear-gradient(90deg,var(--rr-purple),var(--rr-gold),var(--rr-green)) 1;position:relative;z-index:40}
+.label-brand{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:800;letter-spacing:.08em;line-height:1}
+.label-brand img{width:56px;height:56px;border:1px solid var(--rr-line);border-radius:50%;background:#000;padding:4px;object-fit:contain;flex-shrink:0}
+.label-brand small{display:block;margin-top:6px;color:var(--rr-gold);letter-spacing:.28em;font:700 9px Arial,sans-serif}
+.label-desktop-nav{display:flex;gap:27px;font-size:12px}
+.label-header-actions{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--rr-gold);white-space:nowrap}
+.label-header a:hover{color:var(--rr-gold)}
+.label-menu{display:none}
+main>section:not(#artists):not(#home),#artists>div:last-child,footer{width:89%;max-width:none}
+.label-hero{width:100%;padding:48px 5.5%;grid-template-columns:1fr 1.05fr;gap:4%;min-height:0;background:radial-gradient(ellipse at 15% 20%,#63348622,transparent 45%),radial-gradient(ellipse at 85% 35%,#19735022,transparent 48%)}
+main>.label-hero{width:100%}
+.label-hero>div.absolute{display:none}
+.label-hero h1{font-size:clamp(49px,5.2vw,80px);font-weight:400;line-height:1.02;letter-spacing:-3px;margin:27px 0 24px}
+.label-hero .label-hero-copy>p:first-child{font-size:10px;letter-spacing:2px;line-height:1.7}
+.label-hero .label-hero-copy>p:last-of-type{font-size:14px;line-height:1.8;max-width:430px;margin:16px 0}
+.label-hero>div:last-child{max-width:none;border-color:var(--rr-line)}
+.label-hero>div:last-child img{padding:6%}
+.label-button{min-height:46px;padding:13px 22px;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;border-radius:0;line-height:1.6;background-image:none}
+.label-button:hover{background:#e4c180;color:var(--rr-bg)}
+main h2{font-size:clamp(32px,3vw,44px);font-weight:400;line-height:1.12;letter-spacing:-1.1px}
+main h3{font-weight:400;line-height:1.12}
+#about,#music,#studio,#contact{padding-top:65px;padding-bottom:65px}
+#artists{background:var(--rr-panel)}
+#artists article,#about article,#music .rounded-xl,#studio>div{background:var(--rr-panel);box-shadow:none;border-color:var(--rr-line);border-radius:0}
+#music article{border-radius:0}
+footer{padding-block:40px}
+@media(max-width:1050px){.label-desktop-nav{gap:16px}.label-hero h1{font-size:59px}}
+@media(max-width:760px){.label-announcement{font-size:8px;letter-spacing:1.2px}.label-announcement a{margin-left:12px}.label-header{padding:18px 6%;gap:12px}.label-desktop-nav{display:none}.label-menu{display:block}.label-menu summary{cursor:pointer;list-style:none;border:1px solid var(--rr-line);padding:6px 10px;color:var(--rr-cream)}.label-menu summary::-webkit-details-marker{display:none}.label-menu nav{position:absolute;top:100%;left:0;right:0;background:var(--rr-bg);border-bottom:1px solid var(--rr-line);padding:20px 6%;display:grid;gap:10px}.label-menu nav a{min-height:40px;display:flex;align-items:center;color:var(--rr-cream)}main>section:not(#artists):not(#home),#artists>div:last-child,footer{width:88%}main>.label-hero{width:100%;padding:35px 6% 40px;grid-template-columns:1fr;gap:35px}.label-hero h1{font-size:clamp(49px,10vw,73px)}.label-hero>div:last-child{max-width:520px}.label-hero .label-hero-copy>p:first-child{font-size:8px;letter-spacing:1.2px}#about,#music,#studio,#contact{padding-block:45px}}
+@media(max-width:420px){.label-brand{font-size:13px;gap:7px}.label-brand img{width:42px;height:42px}.label-header-actions{gap:10px}.label-header-actions>a{font-size:11px}.label-hero h1{font-size:49px;letter-spacing:-2px}.label-announcement a{display:inline-block}.label-button{font-size:11px;padding:12px 15px}}
