@@ -4,7 +4,10 @@ import React from 'react';
 // Example: { id: 'actual-suno-song-uuid', title: 'Verified song title' }
 const SUNO_PROFILE_URL = 'https://suno.com/@rythmnrootsrecords';
 type SunoTrack = { title: string; url: string; id?: string };
-const SUNO_TRACKS: readonly SunoTrack[] = [{ title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' }];
+const SUNO_TRACKS: readonly SunoTrack[] = [
+  { title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' },
+  { title: 'Outside the Parish', url: 'https://suno.com/s/WsXl55WmQ6OicE4Y' },
+];
 
 const STORE_URL = `${import.meta.env.BASE_URL}store/`;
 const nav: readonly (readonly [label: string, href: string])[] = [['Beat Store',STORE_URL],['Music','#music'],['Artists','#artists'],['Our Roots','#about'],['Studio','#studio'],['Contact','#contact']];
