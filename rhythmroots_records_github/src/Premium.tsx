@@ -5,7 +5,7 @@ import React from 'react';
 const SUNO_PROFILE_URL = 'https://suno.com/@rythmnrootsrecords';
 type SunoTrack = { title: string; url: string; id?: string };
 const SUNO_TRACKS: readonly SunoTrack[] = [
-  { title: 'Suno track 01', url: 'https://suno.com/s/V3sWCeB1IsMmwA77' },
+  { title: 'Suno track 01', url: 'https://suno.com/s/oNthu2bHx1gIUl42' },
   { title: 'Outside the Parish', url: 'https://suno.com/s/WsXl55WmQ6OicE4Y' },
 ];
 
