@@ -8,6 +8,7 @@ const SUNO_TRACKS: readonly SunoTrack[] = [
   { title: 'Suno track 01', url: 'https://suno.com/s/oNthu2bHx1gIUl42' },
   { title: 'Outside the Parish', url: 'https://suno.com/s/WsXl55WmQ6OicE4Y' },
   { title: 'Suno track 03', url: 'https://suno.com/s/jE2n2BzVyBeDfcED' },
+  { title: 'Suno track 04', url: 'https://suno.com/s/Il0XUM14iblVU09n' },
 ];
 
 const STORE_URL = `${import.meta.env.BASE_URL}store/`;
